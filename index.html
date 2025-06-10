@@ -310,7 +310,7 @@
     </div>
   </main>
   <script>
-    const baseIMEI = "359391090009"; // 11 digits fixed
+    const baseIMEI = "359391090009"; // 12 digits fixed
     const RECENT_IMEI_KEY = "pta_recent_imeis";
     const INITIAL_DISPLAY_COUNT = 10;
     let imeiDisplayCount = INITIAL_DISPLAY_COUNT;
@@ -418,12 +418,12 @@
     }
 
     function generateIMEI() {
-      // Generate exactly 14 digits: 11 fixed + 3 random digits
+      // Generate exactly 15 digits: 12 fixed + 3 random digits
       let random3 = pad(Math.floor(Math.random() * 1000), 3); // 000-999
-      let imei = baseIMEI + random3; // 11 + 3 = 14 digits
+      let imei = baseIMEI + random3; // 12 + 3 = 15 digits
       
-      // Verify length is exactly 14 digits
-      if (imei.length !== 14) {
+      // Verify length is exactly 15 digits
+      if (imei.length !== 15) {
         console.error('Invalid IMEI length generated');
         return generateIMEI(); // Try again
       }
