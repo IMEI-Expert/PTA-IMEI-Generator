@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PTA Approved IMEI Generator – Free Valid IMEI Numbers for Pakistan 2025</title>
+  <meta name="description" content="Instantly generate PTA approved IMEI numbers for free. Create valid IMEI numbers for Pakistan mobile registration. 100% working PTA IMEI generator tool for 2025.">
+  <meta name="keywords" content="PTA IMEI, IMEI Generator Pakistan, PTA approved, IMEI checker, free IMEI generator, valid IMEI, PTA IMEI tool, PTA registration, Pakistan mobile IMEI, PTA IMEI check 2025">
+  <meta name="author" content="IMEI-Expert">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1877f2;
+      --secondary: #fff;
+      --accent: #e4e6eb;
+      --glass: rgba(255,255,255,0.7);
+      --shadow: rgba(24, 119, 242, 0.2);
+      --border: #d0d3d8;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #1877f2 0%, #e4e6eb 100%);
+      font-family: 'Roboto', Arial, sans-serif;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .container {
+      background: var(--glass);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px 0 var(--shadow);
+      border: 1px solid var(--border);
+      max-width: 98vw;
+      width: 100%;
+      padding: 32px 2vw 24px 2vw;
+      text-align: center;
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      margin: 18px auto 18px auto;
+      transition: max-width 0.2s;
+    }
+    .fb-title {
+      color: var(--primary);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -2px;
+      text-shadow: 0 2px 8px #fff7;
+    }
+    .subtitle {
+      color: #222;
+      font-size: 1rem;
+      margin-bottom: 18px;
+      letter-spacing: 0.2px;
+    }
+    .glass-box {
+      margin: 24px auto 16px auto;
+      background: var(--glass);
+      border-radius: 18px;
+      padding: 24px 18px;
+      box-shadow: 0 4px 16px 0 #1877f215;
+      border: 1.5px solid var(--border);
+      min-height: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      max-width: 540px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .imei {
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      color: #333;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-shadow: 0 1px 4px #fff9;
+      user-select: all;
+    }
+    .btn {
+      background: var(--primary);
+      color: var(--secondary);
+      font-size: 1.08rem;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 28px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 2px 8px 0 #1877f230;
+      margin-top: 8px;
+      margin-bottom: 6px;
+      transition: background 0.18s, box-shadow 0.18s;
+    }
+    .btn:hover, .btn:focus {
+      background: #145db2;
+      box-shadow: 0 4px 14px 0 #1877f250;
+    }
+    .copy-feedback {
+      color: #009e4d;
+      font-size: 0.95rem;
+      margin-top: 4px;
+      min-height: 18px;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .copy-feedback.visible {
+      opacity: 1;
+    }
+    .recent-imeis-box {
+      background: var(--accent);
+      margin: 18px auto 0 auto;
+      border-radius: 12px;
+      padding: 12px 9px 7px 9px;
+      box-shadow: 0 2px 7px 0 #1877f209;
+      border: 1px solid #dbe4ef;
+      max-width: 480px;
+      width: 100%;
+      text-align: left;
+    }
+    .recent-imeis-box h3 {
+      font-size: 1.07rem;
+      color: #1877f2;
+      margin: 2px 0 7px 0;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .recent-imeis-list {
+      margin: 0 0 0 0;
+      padding: 0;
+      list-style: decimal inside;
+      font-size: 0.99rem;
+      color: #222;
+      max-height: 300px;
+      overflow: hidden;
+      transition: max-height 0.2s;
+    }
+    .recent-imeis-list li {
+      margin: 0 0 3px 0;
+      padding: 0;
+      word-break: break-all;
+      background: #fff;
+      border-radius: 6px;
+      padding-left: 8px;
+      padding-right: 8px;
+      box-shadow: 0 1px 4px #1877f208;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .recent-imeis-list .copy-btn {
+      background: #eee;
+      color: #1877f2;
+      border: none;
+      border-radius: 4px;
+      padding: 2px 9px;
+      font-size: 0.93rem;
+      cursor: pointer;
+      margin-left: 10px;
+      font-weight: 500;
+      transition: background 0.18s;
+    }
+    .recent-imeis-list .copy-btn:hover {
+      background: #d7e6ff;
+    }
+    .more-btn {
+      background: none;
+      color: #1877f2;
+      border: none;
+      font-size: 0.99rem;
+      margin: 5px 0 0 0;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .seo-footer {
+      margin-top: 24px;
+      font-size: 0.96rem;
+      color: #666;
+      background: #f8fafd80;
+      border-radius: 8px;
+      padding: 12px 10px;
+      border: 1px solid #e8eaf0;
+      text-align: left;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .seo-section {
+      margin-top: 18px;
+      text-align: left;
+      color: #1a1a1a;
+      line-height: 1.7;
+      font-size: 1.01rem;
+      background: #f8fafd80;
+      border-radius: 8px;
+      padding: 16px 14px;
+      border: 1px solid #e8eaf0;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .seo-section h2 {
+      color: #1877f2;
+      font-size: 1.18rem;
+      margin-top: 0.6em;
+      margin-bottom: 0.5em;
+      font-weight: 700;
+    }
+    .seo-section ul {
+      margin: 0.2em 0 1em 1.4em;
+      padding: 0;
+    }
+    @media (max-width: 800px) {
+      .container, .glass-box, .recent-imeis-box {
+        max-width: 100vw;
+        border-radius: 0px;
+      }
+    }
+    @media (max-width: 500px) {
+      .container {
+        padding: 16px 0vw 12px 0vw;
+      }
+      .fb-title {
+        font-size: 2rem;
+      }
+      .glass-box {
+        padding: 10px 2px;
+      }
+      .recent-imeis-box {
+        padding: 7px 2px 4px 2px;
+      }
+      .seo-section, .seo-footer {
+        padding: 10px 2px;
+        font-size: 0.98rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="fb-title">PTA IMEI Generator</div>
+    <div class="subtitle">Generate Valid PTA Approved IMEI Numbers Instantly<br>
+      <span style="color:#1877f2;font-weight:500">Pakistan Mobile Registration Tool 2025</span>
+    </div>
+    <section class="glass-box">
+      <div class="imei" id="imei-value">359391090009762</div>
+      <button class="btn" id="generate-btn">Generate PTA Approved IMEI</button>
+      <button class="btn" id="copy-btn">Copy IMEI</button>
+      <div class="copy-feedback" id="copy-feedback"></div>
+    </section>
+    <section class="recent-imeis-box" id="recent-imeis-section" style="display:none;">
+      <h3>Recent IMEI Numbers</h3>
+      <ol class="recent-imeis-list" id="recent-imeis-list"></ol>
+      <button class="more-btn" id="more-btn" style="display:none;">Show more</button>
+    </section>
+    <div class="seo-footer">
+      <strong>PTA Approved IMEI Generator for Pakistan</strong><br>
+      Instantly generate <b>PTA compliant IMEI numbers</b> for your mobile device. This tool creates valid, random PTA approved IMEIs based on official patterns for use in Pakistan.<br>
+      <i>For legal use only. Always verify your IMEI before use.</i>
+    </div>
+    <div class="seo-section">
+      <h2>What is an IMEI Number?</h2>
+      <p>
+        IMEI stands for <b>International Mobile Equipment Identity</b>. It is a unique 15-digit code assigned to every mobile device. In Pakistan, all phones must have a PTA approved IMEI to be registered and used on local networks. The IMEI is crucial for tracking, registering, and verifying your phone’s legality.
+      </p>
+      <h2>Why Use a PTA Approved IMEI Generator?</h2>
+      <ul>
+        <li>Instantly generate valid IMEI numbers for testing and development.</li>
+        <li>Ensure your mobile device can be registered with <b>Pakistan Telecommunication Authority (PTA)</b>.</li>
+        <li>Use for educational purposes, app development, and device diagnostics.</li>
+        <li>100% free online PTA IMEI generator tool for 2025.</li>
+      </ul>
+      <h2>How to Check if Your IMEI is PTA Approved?</h2>
+      <ol>
+        <li>Open the dialer and type <b>*#06#</b> to display your device’s IMEI.</li>
+        <li>Visit the official <a href="https://dirbs.pta.gov.pk/" target="_blank" rel="noopener">PTA DIRBS IMEI checker</a>.</li>
+        <li>Enter your IMEI number and verify its status instantly.</li>
+      </ol>
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p><b>Is this IMEI generator legal?</b><br>
+      This tool is for educational, development, and testing purposes only. Do not use generated IMEIs for fraudulent or illegal activities. Always register your real device with PTA.</p>
+      <p><b>Can I use these IMEIs to unblock my phone in Pakistan?</b><br>
+      No, you must use your phone’s original IMEI for PTA registration. This generator is only for testing and development.</p>
+      <p><b>How does the PTA IMEI generator work?</b><br>
+      The tool randomizes the last 5 digits of a valid PTA approved IMEI while keeping the required format and calculates the correct Luhn checksum for validity.</p>
+      <h2>Benefits of Using Our Free PTA IMEI Generator</h2>
+      <ul>
+        <li>Fast and secure – no registration required.</li>
+        <li>Compatible with all Pakistani mobile networks.</li>
+        <li>Designed for the latest 2025 PTA regulations.</li>
+        <li>Mobile friendly interface with modern design.</li>
+        <li>Easy to use – generate and copy IMEI in one click!</li>
+      </ul>
+      <h2>PTA Mobile Registration in Pakistan (2025 Update)</h2>
+      <p>
+        The PTA (Pakistan Telecommunication Authority) regularly updates its policies for mobile registration. To avoid your device being blocked, always use a valid and approved IMEI. With the increasing number of imported and used phones in Pakistan, checking IMEI status is more important than ever.
+      </p>
+      <h2>Disclaimer</h2>
+      <p>
+        This website is not affiliated with PTA or any government authority. The IMEI numbers generated here are for learning, development, and testing only. For PTA registration and legal compliance, always use your device’s original IMEI.
+      </p>
+      <h2>Related Keywords</h2>
+      <p>
+        PTA IMEI generator, free IMEI generator Pakistan, PTA approved IMEI tool, IMEI checker Pakistan, generate valid IMEI for PTA, mobile registration Pakistan, PTA 2025 IMEI, PTA compliance, IMEI number generator, PTA DIRBS, valid IMEI for Pakistan.
+      </p>
+    </div>
+  </main>
+  <script>
+    const baseIMEI = "3593910900";
+    const RECENT_IMEI_KEY = "pta_recent_imeis";
+    const INITIAL_DISPLAY_COUNT = 10;
+    let imeiDisplayCount = INITIAL_DISPLAY_COUNT;
+
+    // Utility functions
+    function luhnChecksum(imei14) {
+      let sum = 0;
+      for (let i = 0; i < 14; ++i) {
+        let n = Number(imei14.charAt(i));
+        if (i % 2 === 1) n = n * 2;
+        if (n > 9) n -= 9;
+        sum += n;
+      }
+      return (10 - (sum % 10)) % 10;
+    }
+
+    function pad(n, width) {
+      n = n + '';
+      return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
+    }
+
+    function storeRecentIMEI(imei) {
+      let imeis = JSON.parse(localStorage.getItem(RECENT_IMEI_KEY)) || [];
+      imeis = imeis.filter(i => i !== imei);
+      imeis.unshift(imei);
+      if (imeis.length > 100) imeis.length = 100;
+      localStorage.setItem(RECENT_IMEI_KEY, JSON.stringify(imeis));
+    }
+
+    function getRecentIMEIs() {
+      return JSON.parse(localStorage.getItem(RECENT_IMEI_KEY)) || [];
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showCopyFeedback("IMEI copied!");
+      } catch (err) {
+        showCopyFeedback("Failed to copy.");
+      }
+      document.body.removeChild(textarea);
+    }
+
+    function showCopyFeedback(msg) {
+      const el = document.getElementById('copy-feedback');
+      el.textContent = msg;
+      el.classList.toggle('visible', !!msg);
+    }
+
+    function copyIMEISingle(imei) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(imei).then(() => {
+          showCopyFeedback("IMEI copied!");
+        }, () => {
+          fallbackCopyTextToClipboard(imei);
+        });
+      } else {
+        fallbackCopyTextToClipboard(imei);
+      }
+    }
+
+    function renderRecentIMEIs() {
+      const imeis = getRecentIMEIs();
+      const section = document.getElementById('recent-imeis-section');
+      const list = document.getElementById('recent-imeis-list');
+      const moreBtn = document.getElementById('more-btn');
+      if (imeis.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+      section.style.display = "";
+      list.innerHTML = "";
+      const displayImeis = imeis.slice(0, imeiDisplayCount);
+      displayImeis.forEach((imei) => {
+        const li = document.createElement('li');
+        const span = document.createElement('span');
+        span.textContent = imei;
+        const btn = document.createElement('button');
+        btn.className = "copy-btn";
+        btn.textContent = "Copy";
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          copyIMEISingle(imei);
+        });
+        li.appendChild(span);
+        li.appendChild(btn);
+        list.appendChild(li);
+      });
+      if (imeiDisplayCount < imeis.length) {
+        moreBtn.style.display = "";
+      } else {
+        moreBtn.style.display = "none";
+      }
+    }
+
+    function showMoreIMEIs() {
+      imeiDisplayCount += INITIAL_DISPLAY_COUNT;
+      renderRecentIMEIs();
+    }
+
+    function generateIMEI() {
+      let random5 = pad(Math.floor(Math.random() * 100000), 5);
+      let imei14 = baseIMEI + random5;
+      let checksum = luhnChecksum(imei14);
+      let imei = imei14 + checksum;
+      document.getElementById('imei-value').textContent = imei;
+      showCopyFeedback("");
+      storeRecentIMEI(imei);
+      imeiDisplayCount = INITIAL_DISPLAY_COUNT;
+      renderRecentIMEIs();
+    }
+
+    function copyIMEI() {
+      const imei = document.getElementById('imei-value').textContent;
+      copyIMEISingle(imei);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('generate-btn').addEventListener('click', generateIMEI);
+      document.getElementById('copy-btn').addEventListener('click', copyIMEI);
+      document.getElementById('more-btn').addEventListener('click', showMoreIMEIs);
+      renderRecentIMEIs();
+    });
+  </script>
+</body>
+</html>
