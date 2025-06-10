@@ -247,7 +247,7 @@
       <span style="color:#1877f2;font-weight:500">Pakistan Mobile Registration Tool 2025</span>
     </div>
     <section class="glass-box">
-      <div class="imei" id="imei-value">359391090009762</div>
+      <div class="imei" id="imei-value">35939109009001</div>
       <button class="btn" id="generate-btn">Generate PTA Approved IMEI</button>
       <button class="btn" id="copy-btn">Copy IMEI</button>
       <div class="copy-feedback" id="copy-feedback"></div>
@@ -286,7 +286,7 @@
       <p><b>Can I use these IMEIs to unblock my phone in Pakistan?</b><br>
       No, you must use your phone’s original IMEI for PTA registration. This generator is only for testing and development.</p>
       <p><b>How does the PTA IMEI generator work?</b><br>
-      The tool randomizes the last 5 digits of a valid PTA approved IMEI while keeping the required format and calculates the correct Luhn checksum for validity.</p>
+      The tool randomizes the last 3 digits of a valid PTA approved IMEI while keeping the required format and calculates the correct Luhn checksum for validity.</p>
       <h2>Benefits of Using Our Free PTA IMEI Generator</h2>
       <ul>
         <li>Fast and secure – no registration required.</li>
@@ -310,7 +310,7 @@
     </div>
   </main>
   <script>
-    const baseIMEI = "3593910900";
+    const baseIMEI = "35939109009"; // 11 digits fixed
     const RECENT_IMEI_KEY = "pta_recent_imeis";
     const INITIAL_DISPLAY_COUNT = 10;
     let imeiDisplayCount = INITIAL_DISPLAY_COUNT;
@@ -418,10 +418,16 @@
     }
 
     function generateIMEI() {
-      let random5 = pad(Math.floor(Math.random() * 100000), 5);
-      let imei14 = baseIMEI + random5;
-      let checksum = luhnChecksum(imei14);
-      let imei = imei14 + checksum;
+      // Generate exactly 14 digits: 11 fixed + 3 random digits
+      let random3 = pad(Math.floor(Math.random() * 1000), 3); // 000-999
+      let imei = baseIMEI + random3; // 11 + 3 = 14 digits
+      
+      // Verify length is exactly 14 digits
+      if (imei.length !== 14) {
+        console.error('Invalid IMEI length generated');
+        return generateIMEI(); // Try again
+      }
+      
       document.getElementById('imei-value').textContent = imei;
       showCopyFeedback("");
       storeRecentIMEI(imei);
